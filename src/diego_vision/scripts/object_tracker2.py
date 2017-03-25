@@ -7,6 +7,8 @@
     
     Created for the Pi Robot Project: http://www.pirobot.org
     Copyright (c) 2013 Patrick Goebel.  All rights reserved.
+    
+    Modify by www.diegorobot.com, this version can be used in opencv3.
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
