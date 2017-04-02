@@ -103,7 +103,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_master_right_axix" type="fixed">
+  <joint name="right_leg_to_master_right_axix" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="right_leg"/>
     <child link="tyer_master_right_axis"/>
@@ -123,7 +123,7 @@
     </visual>
   </link>
   
-  <joint name="left_leg_to_master_left_axis" type="fixed">
+  <joint name="left_leg_to_master_left_axis" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="left_leg"/>
     <child link="tyer_master_left_axis"/>
@@ -183,7 +183,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_right_axix1" type="fixed">
+  <joint name="right_leg_to_slave_right_axix1" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="right_leg_front"/>
     <child link="tyer_slave_right_axis1"/>
@@ -203,7 +203,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_right_axix2" type="fixed">
+  <joint name="right_leg_to_slave_right_axix2" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="right_leg"/>
     <child link="tyer_slave_right_axis2"/>
@@ -223,7 +223,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_right_axix3" type="fixed">
+  <joint name="right_leg_to_slave_right_axix3" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="right_leg"/>
     <child link="tyer_slave_right_axis3"/>
@@ -243,7 +243,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_right_axix4" type="fixed">
+  <joint name="right_leg_to_slave_right_axix4" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="right_leg"/>
     <child link="tyer_slave_right_axis4"/>
@@ -263,7 +263,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_right_axix5" type="fixed">
+  <joint name="right_leg_to_slave_right_axix5" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="right_leg_back"/>
     <child link="tyer_slave_right_axis5"/>
@@ -283,7 +283,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_left_axix1" type="fixed">
+  <joint name="right_leg_to_slave_left_axix1" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="left_leg_front"/>
     <child link="tyer_slave_left_axis1"/>
@@ -303,7 +303,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_left_axix2" type="fixed">
+  <joint name="right_leg_to_slave_left_axix2" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="left_leg"/>
     <child link="tyer_slave_left_axis2"/>
@@ -323,7 +323,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_left_axix3" type="fixed">
+  <joint name="right_leg_to_slave_left_axix3" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="left_leg"/>
     <child link="tyer_slave_left_axis3"/>
@@ -343,7 +343,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_left_axix4" type="fixed">
+  <joint name="right_leg_to_slave_left_axix4" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="left_leg"/>
     <child link="tyer_slave_left_axis4"/>
@@ -363,7 +363,7 @@
     </visual>
   </link>
   
-  <joint name="right_leg_to_slave_left_axix5" type="fixed">
+  <joint name="right_leg_to_slave_left_axix5" type="continuous">
     <axis xyz="0 0 1"/> 
     <parent link="left_leg_back"/>
     <child link="tyer_slave_left_axis5"/>
