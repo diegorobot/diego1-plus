@@ -1,0 +1,19 @@
+controller_list:
+  - name: arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - arm_base_to_arm_round_joint_stevo0
+      - shoulder_2_to_arm_joint_stevo1
+      - big_arm_round_to_joint_stevo2
+      - arm_joint_stevo2_to_arm_joint_stevo3
+      - wrist_to_arm_joint_stevo4
+      - arm_joint_stevo4_to_arm_joint_stevo5
+  - name: gripper_controller
+    action_ns: gripper_action
+    type: GripperCommand
+    default: true
+    joints:
+      - hand_to_grip_joint_stevo6
+      - hand_to_grip_joint_stevo7

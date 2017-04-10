@@ -1,0 +1,38 @@
+<launch>
+
+  <master auto="start"/> 
+  
+  <node name="arduino" pkg="ros_arduino_python" type="arduino_node.py" output="screen">
+      <rosparam file="$(find ros_arduino_python)/config/my_arduino_params.yaml" command="load" />
+  </node> 
+
+
+  <!-- By default, we are not in debug mode -->
+  <arg name="debug" default="false" />
+
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find diego_moveit_config)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="true"/>
+  </include>
+   
+  <node name="arduino_follow_controller" pkg="ros_arduino_python" type="diego1_follow_controller.py" output="screen">
+  </node>
+  
+  <node name="arduino_gripper_controller" pkg="ros_arduino_python" type="diego1_gripper_controller.py" output="screen">
+  </node>
+  
+  <!-- If needed, broadcast static tf for robot root -->
+  <node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 world_frame base_link 100" />
+
+  <!-- We do not have a robot connected, so publish fake joint states -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="false"/>
+    <rosparam param="/source_list">[/move_group/fake_controller_joint_states]</rosparam>
+  </node>
+
+  <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
+  <include file="$(find diego_moveit_config)/launch/move_group.launch">
+  </include>
+
+
+</launch>
