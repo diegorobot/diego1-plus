@@ -34,26 +34,26 @@ class MoveItDemo:
         rospy.init_node('moveit_demo', anonymous=True)
         
  
-        # Connect to the right_arm move group
-        right_arm = moveit_commander.MoveGroupCommander('arm')
+        # Connect to the arm move group
+        arm = moveit_commander.MoveGroupCommander('arm')
                        
         # Get the name of the end-effector link
-        end_effector_link = right_arm.get_end_effector_link()
+        end_effector_link = arm.get_end_effector_link()
         
         # Display the name of the end_effector link
         rospy.loginfo("The end effector link is: " + str(end_effector_link))
         
         # Set a small tolerance on joint angles
-        right_arm.set_goal_joint_tolerance(0.001)
+        arm.set_goal_joint_tolerance(0.001)
         
         # Start the arm target in "resting" pose stored in the SRDF file
-        right_arm.set_named_target('arm_default_pose')
+        arm.set_named_target('arm_default_pose')
         
         # Plan a trajectory to the goal configuration
-        traj = right_arm.plan()
+        traj = arm.plan()
          
         # Execute the planned trajectory
-        right_arm.execute(traj)
+        arm.execute(traj)
         
         # Pause for a moment
         rospy.sleep(1)         
